@@ -2,17 +2,24 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: cormoran
-      url-base: https://github.com/cormoran
-    - name: caksoylar  # <-- RGB LED
+    - name: caksoylar # <-- RGB LED
       url-base: https://github.com/caksoylar
+    - name: cormoran # <-- Settings RPC / custom Studio RPC
+      url-base: https://github.com/cormoran
   projects:
     - name: zmk
       remote: cormoran
-      revision: 3931facea7507151a53f209ca4f8a717fa6bd400 # v0.3-branch+dya
+      revision: 88b81efef10dc7cb99f87d4232a672e0f3c0d69b # v0.3-branch+custom-studio-protocol+activity
       import: app/west.yml
     - name: zmk-rgbled-widget
       remote: caksoylar
       revision: 8756cb7b8114069fa3c25c6f6c990f24988fceff # v0.3
+    - name: zmk-module-settings-rpc
+      remote: cormoran
+      revision: 78f86df9e6c5edaf57bef3ccbd7f360cfdf49291 # main
+    - name: zmk-feature-runtime-macro
+      remote: cormoran
+      revision: 38530962eb7061b60efcb98e84585cfb1f0cb6de # main
+      import: true
   self:
     path: config

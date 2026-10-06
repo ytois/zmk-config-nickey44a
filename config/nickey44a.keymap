@@ -33,7 +33,6 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
-
     };
 
     keymap {
@@ -41,37 +40,55 @@
 
         default_layer {
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp E  &kp R  &kp T                              &kp Y    &kp U     &kp I      &kp O    &kp P     &kp SQT
-&kp LCTRL  &kp A  &kp S  &kp D  &kp F  &kp G                              &kp H    &kp J     &kp K      &kp L    &kp SEMI  &kp MINUS
-&kp LSHFT  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp LEFT_WIN    &kp DELETE  &kp N    &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp EQUAL
-                                &mo 2  &mo 1  &kp SPACE       &kp BSPC    &kp RET  &kp RALT
+&kp ESC        &kp Q  &kp W  &kp E  &kp R                   &kp T                                &kp Y          &kp U                     &kp I      &kp O    &kp P     &kp BACKSPACE
+&mt LCTRL TAB  &kp A  &kp S  &kp D  &kp F                   &kp G                                &kp H          &kp J                     &kp K      &kp L    &kp SEMI  &kp SINGLE_QUOTE
+&kp LSHFT      &kp Z  &kp X  &kp C  &kp V                   &lt 3 B  &kp LEFT_WIN    &kp DELETE  &kp N          &kp M                     &kp COMMA  &kp DOT  &kp FSLH  &kp MINUS
+                                    &mt LEFT_COMMAND LANG2  &mo 1    &lt 0 SPACE     &kp ENTER   &kp BACKSPACE  &mt RIGHT_GUI LANGUAGE_1
             >;
         };
 
-        layer_1 {
+        symbol {
             bindings = <
-&kp ESCAPE  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5                            &kp NUMBER_6      &kp N7                &kp N8                 &kp N9             &kp N0         &kp GRAVE
-&trans      &kp F1        &kp F2        &kp F3        &kp F4        &kp F5                                  &kp LEFT          &kp DOWN              &kp UP                 &kp RIGHT          &trans         &kp TILDE
-&trans      &kp F6        &kp F7        &kp F8        &kp F9        &kp F10       &mo 3     &studio_unlock  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp BACKSLASH  &trans
-                                                      &trans        &trans        &trans    &kp DELETE      &trans            &trans
+&trans  &kp AMPERSAND  &kp N7        &kp N8        &kp N9        &kp DOLLAR                                 &kp CARET         &kp ASTERISK          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EQUAL        &kp PLUS
+&trans  &kp HASH       &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp PERCENT                                &kp LEFT_BRACE    &kp RIGHT_BRACE       &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp COLON        &kp DOUBLE_QUOTES
+&trans  &kp AT_SIGN    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp N0       &kp PERIOD    &studio_unlock  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp LESS_THAN         &kp GREATER_THAN       &kp EXCLAMATION  &kp UNDERSCORE
+                                                   &trans        &trans       &trans        &trans          &trans            &trans
             >;
         };
 
-        layer_2 {
+        number {
             bindings = <
-&trans  &trans  &trans     &trans      &trans  &trans                    &kp QUESTION   &trans  &trans  &trans  &kp PERCENT  &trans
-&trans  &kp AT  &kp HASH   &kp DOLLAR  &trans  &trans                    &kp EXCL       &trans  &trans  &trans  &trans       &trans
-&trans  &trans  &kp ASTRK  &kp CARET   &trans  &trans  &trans    &trans  &kp AMPERSAND  &trans  &trans  &trans  &trans       &trans
-                                       &trans  &trans  &trans    &trans  &trans         &trans
+&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5                    &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &kp PLUS
+&trans  &trans        &trans        &trans        &trans        &trans                          &kp COMMA     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &none         &kp EQUAL
+&trans  &trans        &trans        &trans        &trans        &trans        &trans    &trans  &kp PERIOD    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none         &kp MINUS
+                                                  &trans        &trans        &trans    &trans  &trans        &kp N0
             >;
         };
 
-        layer_3 {
+        bluetooth {
             bindings = <
 &bt BT_CLR      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans  &trans  &trans  &trans  &trans  &trans
 &bt BT_CLR_ALL  &trans        &trans        &trans        &trans        &trans                          &trans  &trans  &trans  &trans  &trans  &trans
 &trans          &trans        &trans        &trans        &trans        &trans        &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
                                                           &trans        &trans        &trans    &trans  &trans  &trans
+            >;
+        };
+
+        layer_4 {
+            bindings = <
+&trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5                    &trans  &kp PAGE_UP  &kp UP    &kp PAGE_DOWN  &kp HOME  &kp C_VOLUME_UP
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &kp LEFT     &kp DOWN  &kp RIGHT      &kp END   &kp C_VOLUME_DOWN
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans       &trans    &trans         &trans    &kp K_MUTE
+                                &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+        };
+
+        layer_5 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                                &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };

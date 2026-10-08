@@ -4,7 +4,7 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: cormoran
       url-base: https://github.com/cormoran
-    - name: caksoylar  # <-- RGB LED
+    - name: caksoylar # <-- RGB LED
       url-base: https://github.com/caksoylar
   projects:
     - name: zmk
@@ -14,5 +14,9 @@ manifest:
     - name: zmk-rgbled-widget
       remote: caksoylar
       revision: 8756cb7b8114069fa3c25c6f6c990f24988fceff # v0.3
+    - name: zmk-feature-runtime-combo
+      remote: cormoran
+      revision: main
+      import: true
   self:
     path: config

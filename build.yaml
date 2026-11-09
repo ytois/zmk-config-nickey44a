@@ -21,7 +21,7 @@ include:
   - board: seeeduino_xiao_ble
     shield: nickey44a_r rgbled_adapter
     snippet: studio-rpc-usb-uart
-    cmake-args: -DCONFIG_ZMK_STUDIO=y
+    cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_USB_LOGGING=y
     artifact-name: nickey44a_r
   - board: seeeduino_xiao_ble
     shield: nickey44a_l rgbled_adapter
